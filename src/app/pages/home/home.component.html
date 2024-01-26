@@ -1,2 +1,35 @@
-<p>home works!</p>
-<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Amazon.in</span>
+      <span class="example-spacer"></span>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+      
+    </mat-toolbar-row>
+</mat-toolbar>
+<nav class="nav">
+    <div class="nav-search">
+      <input type="text" placeholder="Search Products"/>
+      <button>Search</button>
+      </div>
+      <ul>
+        <li><a href="/details">details</a></li>
+        <li><a href="/login">login</a></li>
+        <li><a href="/signup">signup</a></li>
+        <li><a href="/checkout">cart</a></li>
+        <mat-toolbar-row>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>shopping_cart</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            
+                <div >
+                    <span>1 items</span>
+                    <a href="checkout" style="text-decoration: none;"> View-Cart</a>
+    
+                </div>
+    
+        </mat-menu>
+      </mat-toolbar-row>
+      </ul>
+</nav>
+  

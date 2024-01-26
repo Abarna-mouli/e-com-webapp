@@ -12,6 +12,7 @@ export const routes: Routes = [
   { path: 'details', component: DetailsComponent},
   { path: 'login', component: LoginComponent},
   { path: 'signup', component: SignupComponent},
-  { path: '',   redirectTo: '/login', pathMatch: 'full' }, // redirect to `first-component`
-  { path: '**', component: NotfoundComponent }
+  { path: '',   redirectTo: '/home', pathMatch: 'full' }, // redirect to `first-component`
+  { path: '**', component: NotfoundComponent },
+  
 ];

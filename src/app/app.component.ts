@@ -16,11 +16,12 @@ import {MatTableModule} from '@angular/material/table';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { RouterModule } from '@angular/router';
+import { TracerComponent } from './components/tracer/tracer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,RouterModule,MatSidenavModule,MatGridListModule,MatMenuModule,MatButtonModule,MatCardModule,MatIconModule,MatExpansionModule,MatListModule,MatToolbarModule,MatTableModule,MatBadgeModule,MatSnackBarModule],
+  imports: [TracerComponent,CommonModule, RouterOutlet,RouterModule,MatSidenavModule,MatGridListModule,MatMenuModule,MatButtonModule,MatCardModule,MatIconModule,MatExpansionModule,MatListModule,MatToolbarModule,MatTableModule,MatBadgeModule,MatSnackBarModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

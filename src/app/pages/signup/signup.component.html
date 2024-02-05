@@ -14,21 +14,25 @@ signUp(data:object):void
   console.warn(data)
 }
 -->
+<app-home></app-home>
 <div class="login-container">
   <mat-card class="login-card">
     <mat-card-content>
 <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
     <mat-form-field >
       <input matInput placeholder="First Name" id="first-name" formControlName="Firstname">
+      @if (signUpForm.get('Firstname')?.invalid) {
+        <mat-error>{{getErrorMessage()?.Fname}}</mat-error>
+      }
     </mat-form-field><br/>
     <mat-form-field >
       <input matInput placeholder="Last Name" id="last-name">
     </mat-form-field>
     <div class="example-container">
       <mat-form-field>
-        <input matInput placeholder="pat@example.com" [formControl]="email" required>
-        @if (email.invalid) {
-          <mat-error>{{getErrorMessage()}}</mat-error>
+        <input matInput placeholder="pat@example.com" formControlName="email" required>
+        @if (signUpForm.get('email')?.invalid) {
+          <mat-error>{{getErrorMessage()?.email}}</mat-error>
         }
       </mat-form-field><br/>
       <mat-form-field>
@@ -39,17 +43,6 @@ signUp(data:object):void
         </button>
       </mat-form-field>
     </div>
-    <div
-      *ngIf="signUpForm.controls.Firstname.invalid && (signUpForm.controls.Firstname.dirty || signUpForm.controls.Firstname.touched)"
-    >
-      <div *ngIf="signUpForm.controls.Firstname.errors?.['required']">
-        First Name is required.
-      </div>
-      <div *ngIf="signUpForm.controls.Firstname.errors?.['minlength']">
-        First Name must be at least 5 characters long.
-      </div>
-    </div>
-  
     <br />
       <button type="submit" [disabled]="!signUpForm.valid">Submit Profile</button><br><br>
     <h4 style="text-align: center;">Already an user? <a href="login">Login</a></h4>

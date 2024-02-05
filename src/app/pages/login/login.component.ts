@@ -5,6 +5,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {FormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { HomeComponent } from '../home/home.component';
 import {
   FormControl,
   FormGroupDirective,
@@ -22,7 +23,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [MatCardModule, MatInputModule, FormsModule, MatButtonModule, MatIconModule,FormsModule, MatFormFieldModule, MatInputModule, ReactiveFormsModule],
+  imports: [HomeComponent,MatCardModule, MatInputModule, FormsModule, MatButtonModule, MatIconModule,FormsModule, MatFormFieldModule, MatInputModule, ReactiveFormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })

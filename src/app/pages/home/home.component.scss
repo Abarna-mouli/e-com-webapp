@@ -18,7 +18,13 @@
     display:flex;
     margin:5px;
   }
-
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  .mat-toolbar-row {
+    justify-content: flex-end;
+  }
   .nav .nav-search input{
     flex:1;
     color:blueviolet;
@@ -52,4 +58,8 @@
 .nav ul a{
   text-decoration: none;
   color: blueviolet;
+}
+.search-container {
+  display: flex;
+  align-items: center; /* Center vertically */
 }

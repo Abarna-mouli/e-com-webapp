@@ -1,32 +1,24 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <span>Amazon.in</span>
+      <span>Ever Fresh!</span>
       <span class="example-spacer"></span>
       <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
-    </mat-toolbar-row>
+      <div class="search-container">
+      <mat-form-field class="example-form-field" style="padding-left: 100px;width: 500px;height: 70px;margin-top: 25px;text-align: center;">
+        <input matInput type="search" [(ngModel)]="value">
+        
+      </mat-form-field>
+      <button mat-button color="warn">Search</button>
+    </div>
+      <span class="spacer"></span>
+  <button mat-button><a href="/login" style="text-decoration: none;">login</a></button>
+  <button mat-button><a href="/signup" style="text-decoration: none;">signup</a></button>
+  <button mat-button><a href="/details" style="text-decoration: none;">details</a></button>
+  <button mat-button><a href="/checkout" style="text-decoration: none;">cart</a>
+    <mat-icon>shopping_cart</mat-icon>
+  </button>
+  
+  
+</mat-toolbar-row>
 </mat-toolbar>
-<nav class="nav">
-    <div class="nav-search">
-      <input type="text" placeholder="Search Products"/>
-      <button>Search</button>
-      </div>
-      <ul>
-        <li><a href="details">details</a></li>
-        <li><a href="/login">login</a></li>
-        <li><a href="/signup">signup</a></li>
-        <li><a href="/checkout">cart</a></li>
-        <mat-toolbar-row>
-        <button mat-icon-button [matMenuTriggerFor]="menu">
-          <mat-icon>shopping_cart</mat-icon>
-        </button>
-        <mat-menu #menu="matMenu">
-            
-                <div >
-                    <span>1 items</span>
-                    <a href="checkout" style="text-decoration: none;"> View-Cart</a>
-    
-                </div>
-        </mat-menu>
-      </mat-toolbar-row>
-      </ul>
-</nav>
+

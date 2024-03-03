@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Ever Fresh!</span>
+      <span class="example-spacer"></span>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+      <div class="search-container">
+      <input type="search" placeholder="Search here!" style="height: 25px;width: 700px;">
+      <button mat-button>Search</button>
+    </div>
+      <span class="spacer"></span>
+  <button mat-button><a href="/login" style="text-decoration: none;color: aliceblue;">login</a></button>
+  <button mat-button><a href="/signup" style="text-decoration: none;color: aliceblue;">signup</a></button>
+  <button mat-button><a href="/home" style="text-decoration: none;color: aliceblue;">home</a></button>
+  <button mat-button><a href="/details" style="text-decoration: none;color: aliceblue;">details</a></button>
+  <button mat-button (click)="navigateToCheckout()" style="display: flex; align-items: center;">
+    <mat-icon style="margin-right: 5px;">shopping_cart</mat-icon>
+    <a href="/checkout" style="text-decoration: none; color: aliceblue;">cart</a>
+  </button>
+</mat-toolbar-row>
+</mat-toolbar>

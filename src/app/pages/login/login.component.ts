@@ -6,6 +6,7 @@ import {FormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { HomeComponent } from '../home/home.component';
+import { FooterComponent } from '../../components/footer/footer.component';
 import {
   FormControl,
   FormGroupDirective,
@@ -14,6 +15,7 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
+import { SearchbarComponent } from '../../components/searchbar/searchbar.component';
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
     const isSubmitted = form && form.submitted;
@@ -23,7 +25,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [HomeComponent,MatCardModule, MatInputModule, FormsModule, MatButtonModule, MatIconModule,FormsModule, MatFormFieldModule, MatInputModule, ReactiveFormsModule],
+  imports: [SearchbarComponent,FooterComponent,HomeComponent,MatCardModule, MatInputModule, FormsModule, MatButtonModule, MatIconModule,FormsModule, MatFormFieldModule, MatInputModule, ReactiveFormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })

@@ -1,10 +1,10 @@
-<app-home></app-home>
+<app-searchbar></app-searchbar>
 <div class="login-container">
     
 <mat-card class="login-card">
     
     <mat-card-content>
-        <h1>Sign-in page</h1>
+        <h1 style="font-family:'Times New Roman', Times, serif;">Sign-in page</h1>
         <form class="example-form">
             <mat-form-field class="example-full-width">
               <mat-label>Email</mat-label>
@@ -16,16 +16,16 @@
               @if (emailFormControl.hasError('required')) {
                 <mat-error>Email is <strong>required</strong></mat-error>
               }
-            </mat-form-field>
+            </mat-form-field><br/>
             <mat-form-field class="example-full-width">
                 <mat-label>Password</mat-label>
                 <input type="password" matInput [formControl]="passwordFormControl" >
-                    </mat-form-field>
+                    </mat-form-field><br/>
                     <button mat-raised-button color="primary" (click)="login($event)">Login</button>
           </form>
                   
     </mat-card-content>
   </mat-card>
 </div>
-  
+  <app-footer></app-footer>
   

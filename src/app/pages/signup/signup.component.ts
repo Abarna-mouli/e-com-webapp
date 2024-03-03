@@ -10,10 +10,12 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import { HomeComponent } from '../home/home.component';
+import { FooterComponent } from '../../components/footer/footer.component';
+import { SearchbarComponent } from '../../components/searchbar/searchbar.component';
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [HomeComponent,MatButtonModule,CommonModule,FormsModule,ReactiveFormsModule,MatInputModule,MatFormFieldModule,MatCardModule,MatIconModule],
+  imports: [SearchbarComponent,FooterComponent,HomeComponent,MatButtonModule,CommonModule,FormsModule,ReactiveFormsModule,MatInputModule,MatFormFieldModule,MatCardModule,MatIconModule],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.scss'
 })

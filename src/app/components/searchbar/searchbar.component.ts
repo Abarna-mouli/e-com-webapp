@@ -12,16 +12,21 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { FooterComponent } from '../../components/footer/footer.component'
-import { SearchbarComponent } from '../../components/searchbar/searchbar.component';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-searchbar',
   standalone: true,
-  imports: [SearchbarComponent,FooterComponent,CommonModule,FormsModule,MatInputModule,MatFormFieldModule,ReactiveFormsModule,MatButtonModule,MatSlideToggleModule,MatToolbarModule, MatIconModule,MatMenuModule,RouterOutlet],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  imports: [FooterComponent,CommonModule,FormsModule,MatInputModule,MatFormFieldModule,ReactiveFormsModule,MatButtonModule,MatSlideToggleModule,MatToolbarModule, MatIconModule,MatMenuModule,RouterOutlet],
+  templateUrl: './searchbar.component.html',
+  styleUrl: './searchbar.component.scss'
 })
 
-export class HomeComponent {
-  
+export class SearchbarComponent {
+  value = "Search here!";
+  constructor(private router: Router) { }
+
+  // Method to navigate to the checkout page
+  navigateToCheckout() {
+    this.router.navigateByUrl('/checkout');
+  }
 }
